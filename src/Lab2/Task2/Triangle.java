@@ -10,7 +10,8 @@ public class Triangle extends AreaFigures {
         this.secondSide = secondSide;
         this.thirdSide = thirdSide;
     }
-     @Override
+
+    @Override
     public double area() {
         return 1 / 4. * Math.sqrt((firstSide + secondSide + thirdSide) * (secondSide + thirdSide - firstSide) *
                 (firstSide + thirdSide - secondSide) * (firstSide + secondSide - thirdSide));

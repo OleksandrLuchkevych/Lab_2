@@ -1,13 +1,11 @@
 package Lab2.Task3;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        Plane plane1 = new Plane("Boeing 737", 100);
+        Plane plane1 = new Plane("Boeing 737", 1);
         Plane plane2 = new Plane("Boeing 747", 200);
         Plane plane3 = new Plane("Boeing 757", 300);
 
@@ -15,7 +13,7 @@ public class Main {
         Airport airport2 = new Airport("Airport 2");
 
         Flight flight1 = new Flight("Flight 1", plane1);
-        Flight flight2 = new Flight("Flight 2", plane2);
+        Flight flight2 = new Flight("Flight 2", plane1);
         Flight flight4 = new Flight("Flight 4", plane3);
 
         Passenger passenger1 = new Passenger("Passenger 1", "Passenger 1");

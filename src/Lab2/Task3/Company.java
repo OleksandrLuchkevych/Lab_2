@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Company {
-    private List<Airport> airports = new ArrayList<>();
-    private List<Flight> flight = new ArrayList<>();
-    private List<Passenger> passenger = new ArrayList<>();
-    private List<Ticket> ticket = new ArrayList<>();
+    private final List<Airport> airports = new ArrayList<>();
+    private final List<Flight> flight = new ArrayList<>();
+    private final List<Passenger> passenger = new ArrayList<>();
+    private final List<Ticket> tickets = new ArrayList<>();
 
-    public void addairport(Airport airport) {
+    public final void addairport(Airport airport) {
         airports.add(airport);
     }
 
-    public void editairport(Airport airport1, Airport airport2) {
+    public final void editairport(final Airport airport1, final Airport airport2) {
         if (!airport1.equals(airport2)) {
             airports.remove(airport1);
             airports.add(airport2);
@@ -23,15 +23,15 @@ public class Company {
         }
     }
 
-    public void removeairport(Airport airport) {
+    public final void removeairport(Airport airport) {
         airports.remove(airport);
     }
 
-    public void addflight(Flight flight) {
+    public final void addflight(Flight flight) {
         this.flight.add(flight);
     }
 
-    public void editflight(Flight flight1, Flight flight2) {
+    public final void editflight(final Flight flight1, final Flight flight2) {
         if (!flight1.equals(flight2)) {
             this.flight.remove(flight1);
             this.flight.add(flight2);
@@ -40,16 +40,16 @@ public class Company {
         }
     }
 
-    public void removeflight(Flight flight) {
+    public final void removeflight(final Flight flight) {
         this.flight.remove(flight);
     }
 
 
-    public void addpassenger(Passenger passenger) {
+    public final void addpassenger(final Passenger passenger) {
         this.passenger.add(passenger);
     }
 
-    public void editpassenger(Passenger passenger1, Passenger passenger2) {
+    public final void editpassenger(final Passenger passenger1, final Passenger passenger2) {
         if (!passenger1.equals(passenger2)) {
             this.passenger.remove(passenger1);
             this.passenger.add(passenger2);
@@ -58,27 +58,27 @@ public class Company {
         }
     }
 
-    public void removepassenger(Passenger passenger) {
+    public final void removepassenger(final Passenger passenger) {
         this.passenger.remove(passenger);
     }
 
-
-    public void addticket(Ticket ticket) {
-        this.ticket.add(ticket);
+    public final void addticket(final Ticket ticket) {
+        this.tickets.add(ticket);
     }
 
-    public void editticket(Ticket ticket1, Ticket ticket2) {
+    public final void editticket(final Ticket ticket1, final Ticket ticket2) {
         if (!ticket1.equals(ticket2)) {
-            this.ticket.remove(ticket1);
-            this.ticket.add(ticket2);
+            this.tickets.remove(ticket1);
+            this.tickets.add(ticket2);
         } else {
             System.out.println("Ticket not found");
         }
     }
 
-    public void removeticket(Ticket ticket) {
-        this.ticket.remove(ticket);
+    public final void removeticket(final Ticket ticket) {
+        this.tickets.remove(ticket);
     }
+
 
     public void ShowAllFlights() {
         System.out.println("Available flights:");
@@ -90,7 +90,7 @@ public class Company {
 
     public void ShowPriceForPeriod(LocalDate date1, LocalDate date2) {
         int cost = 0;
-        for (Ticket ticket : ticket) {
+        for (Ticket ticket : tickets) {
             if (ticket.getDate().isAfter(date1) && ticket.getDate().isBefore(date2)) {
                 cost += ticket.getCost();
             }

@@ -1,8 +1,6 @@
 package Lab2.Task3;
 
-import javax.xml.crypto.Data;
 import java.time.LocalDate;
-import java.util.Calendar;
 
 public class Ticket {
 
@@ -21,7 +19,7 @@ public class Ticket {
         this.date = date;
     }
 
-    public Ticket(LocalDate date, Passenger passenger, Flight flight, Airport departure, int cost) {
+    public Ticket(final LocalDate date, final Passenger passenger, final Flight flight, final Airport departure, final int cost) {
         this.date = date;
         this.passenger = passenger;
         this.flight = flight;
@@ -61,4 +59,5 @@ public class Ticket {
     public void setCost(int cost) {
         this.cost = cost;
     }
+
 }

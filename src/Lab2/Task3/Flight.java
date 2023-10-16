@@ -4,7 +4,7 @@ public class Flight {
     private String name;
     private Plane plane;
 
-    public Flight(String name, Plane plane) {
+    public Flight(final String name, final Plane plane) {
         this.name = name;
         this.plane = plane;
     }

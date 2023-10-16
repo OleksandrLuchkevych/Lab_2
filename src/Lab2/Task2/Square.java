@@ -9,6 +9,6 @@ public class Square extends AreaFigures {
 
     @Override
     public double area() {
-        return side*side;
+        return side * side;
     }
 }

@@ -1,6 +1,6 @@
 package Lab2.Task2;
 
-public class Rectangle extends AreaFigures{
+public class Rectangle extends AreaFigures {
     private final double firstSide;
     private final double secondSide;
 
@@ -8,8 +8,9 @@ public class Rectangle extends AreaFigures{
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
+
     @Override
     public double area() {
-        return firstSide*secondSide;
+        return firstSide * secondSide;
     }
 }

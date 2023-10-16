@@ -4,7 +4,7 @@ public class Plane {
     private String name;
     private int capacity;
 
-    public Plane(String name, int capacity) {
+    public Plane(final String name, final int capacity) {
         this.name = name;
         this.capacity = capacity;
     }
