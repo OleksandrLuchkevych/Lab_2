@@ -27,17 +27,17 @@ public class Main {
         LocalDate dateEnd = LocalDate.of(2013, 9, 30);
 
         Company company = new Company();
-        company.addairport(airport1);
-        company.addairport(airport2);
-        company.addflight(flight1);
-        company.addflight(flight2);
-        company.removeflight(flight2);
-        company.editflight(flight1, flight4);
-        company.addticket(ticket1);
-        company.addticket(ticket2);
+        company.addAirport(airport1);
+        company.addAirport(airport2);
+        company.addFlight(flight1);
+        company.addFlight(flight1);
+        company.removeFlight(flight2);
+        company.editFlight(flight1, flight4);
+        company.addTicket(ticket1);
+        company.addTicket(ticket2);
 
-        company.ShowAllFlights();
-        company.ShowPriceForPeriod(dateStart, dateEnd);
+        company.showAllFlights();
+        company.showPriceForPeriod(dateStart, dateEnd);
 
 
     }
