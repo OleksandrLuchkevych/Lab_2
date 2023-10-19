@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
 
-        Plane plane1 = new Plane("Boeing 737", 1);
+        Plane plane1 = new Plane("Boeing 737", 100);
         Plane plane2 = new Plane("Boeing 747", 200);
         Plane plane3 = new Plane("Boeing 757", 300);
 
